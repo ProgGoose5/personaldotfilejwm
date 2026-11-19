@@ -23,7 +23,7 @@ fi
 
 # ---------- 1. Instalar paquetes ----------
 info "Instalando JWM, configuración por defecto de antiX y dependencias mínimas..."
-PAQUETES=(jwm feh x11-xserver-utils xinit rofi)
+PAQUETES=(jwm feh x11-xserver-utils xinit rofi conman-gtk pcmanfm leafpad ) 
 if apt-cache show desktop-defaults-jwm-antix >/dev/null 2>&1; then
   PAQUETES+=(desktop-defaults-jwm-antix)
 else
@@ -64,6 +64,8 @@ cat > "$HOME/.jwmrc" <<'EOF'
 
   <!-- ================= BARRA DE TAREAS ================= -->
   <Tray x="0" y="-1" height="30" autohide="false">
+  <TrayButton popup="Conexión WiFi" icon="/usr/share/icons/papirus-antix/48x48/apps/network-wireless.png">exec:conman-gtk</TrayButton>
+
     <TrayButton icon="/usr/share/icons/papirus-antix/48x48/places/start-here.png">root:1</TrayButton>
     <Spacer width="4"/>
     <TrayButton popup="Rofi" icon="/usr/share/icons/papirus-antix/48x48/apps/system-search.png">exec:rofi -show drun</TrayButton>
