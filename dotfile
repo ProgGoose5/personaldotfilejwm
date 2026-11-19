@@ -22,12 +22,8 @@ if [[ $EUID -eq 0 ]]; then
 fi
 
 # ---------- 1. Instalar paquetes ----------
-info "Actualizando índices de paquetes..."
-sudo apt update
-
 info "Instalando JWM, configuración por defecto de antiX y dependencias mínimas..."
-# desktop-defaults-jwm-antix puede no existir en Debian puro; lo tratamos como opcional.
-PAQUETES=(jwm feh x11-xserver-utils xinit)
+PAQUETES=(jwm feh x11-xserver-utils xinit rofi)
 if apt-cache show desktop-defaults-jwm-antix >/dev/null 2>&1; then
   PAQUETES+=(desktop-defaults-jwm-antix)
 else
@@ -56,9 +52,8 @@ cat > "$HOME/.jwmrc" <<'EOF'
     <Include>$HOME/.jwm/menu</Include>
 
     <Separator/>
-    <Program label="Terminal" icon="/usr/share/icons/papirus-antix/48x48/apps/utilities-terminal.png">x-terminal-emulator</Program>
     <Program label="Gestor de archivos" icon="/usr/share/icons/papirus-antix/48x48/apps/system-file-manager.png">pcmanfm</Program>
-    <Program label="Navegador" icon="/usr/share/icons/papirus-antix/48x48/apps/web-browser.png">firefox-esr</Program>
+    <Program label="Navegador" icon="/usr/share/icons/papirus-antix/48x48/apps/web-browser.png">falkon</Program>
     <Program label="Editor de texto" icon="/usr/share/icons/papirus-antix/48x48/apps/accessories-text-editor.png">leafpad</Program>
     <Separator/>
     <Program label="Bloquear pantalla" icon="/usr/share/icons/papirus-antix/48x48/apps/system-lock-screen.png">xlock -mode blank</Program>
@@ -71,9 +66,9 @@ cat > "$HOME/.jwmrc" <<'EOF'
   <Tray x="0" y="-1" height="30" autohide="false">
     <TrayButton icon="/usr/share/icons/papirus-antix/48x48/places/start-here.png">root:1</TrayButton>
     <Spacer width="4"/>
-    <TrayButton popup="Terminal" icon="/usr/share/icons/papirus-antix/48x48/apps/utilities-terminal.png">exec:x-terminal-emulator</TrayButton>
+    <TrayButton popup="Rofi" icon="/usr/share/icons/papirus-antix/48x48/apps/system-search.png">exec:rofi -show drun</TrayButton>
     <TrayButton popup="Archivos" icon="/usr/share/icons/papirus-antix/48x48/apps/system-file-manager.png">exec:pcmanfm</TrayButton>
-    <TrayButton popup="Navegador" icon="/usr/share/icons/papirus-antix/48x48/apps/web-browser.png">exec:firefox-esr</TrayButton>
+    <TrayButton popup="Navegador" icon="/usr/share/icons/papirus-antix/48x48/apps/web-browser.png">exec:falkon</TrayButton>
     <TrayButton popup="Mostrar escritorio" icon="/usr/share/icons/papirus-antix/48x48/places/user-desktop.png">showdesktop</TrayButton>
     <Spacer width="8"/>
     <TaskList maxwidth="300"/>
@@ -168,10 +163,8 @@ cat > "$HOME/.jwmrc" <<'EOF'
   <Key mask="A" key="Left">ldesktop</Key>
   <Key mask="A" key="Up">udesktop</Key>
   <Key mask="A" key="Down">ddesktop</Key>
-EOF
-
 </JWM>
-EOF
+
 
 info "~/.jwmrc escrito correctamente."
 
@@ -200,7 +193,25 @@ if command -v jwm >/dev/null 2>&1; then
   fi
 fi
 
-# ---------- 7. Instrucciones finales ----------
+# ---------- 7. Crear estilo minimalista para Rofi ----------
+info "Creando estilo minimalista para Rofi..."
+mkdir -p "$HOME/.config/rofi"
+cat > "$HOME/.config/rofi/config.rasi" <<'EOF'
+configuration {
+    modi: "drun";
+    font: "Sans 9";
+    show-icons: true;
+    color-enabled: true;
+    color-window: "#202020, #202020, #000000";
+    color-normal: "#202020, #EDEDED, #202020, #109567, #EDEDED";
+    color-active: "#202020, #109567, #202020, #109567, #EDEDED";
+    color-urgent: "#202020, #EDEDED, #202020, #FF0000, #EDEDED";
+}
+
+
+info "Estilo minimalista para Rofi creado en ~/.config/rofi/config.rasi."
+
+# ---------- 8. Instrucciones finales ----------
 echo
 info "Instalación completada."
 echo "Para probar JWM sin cerrar tu sesión actual:"
@@ -211,3 +222,4 @@ echo "  exec jwm"
 echo
 echo "Si algo no te gusta, tu configuración anterior está en:"
 echo "  $HOME/.jwmrc.bak.*"
+EOF
