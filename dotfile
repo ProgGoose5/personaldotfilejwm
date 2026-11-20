@@ -23,7 +23,7 @@ fi
 
 # ---------- 1. Instalar paquetes ----------
 info "Instalando JWM, configuración por defecto de antiX y dependencias mínimas..."
-PAQUETES=(jwm feh x11-xserver-utils xinit rofi conman-gtk pcmanfm leafpad ) 
+PAQUETES=(jwm feh x11-xserver-utils xinit rofi pcmanfm leafpad ) 
 if apt-cache show desktop-defaults-jwm-antix >/dev/null 2>&1; then
   PAQUETES+=(desktop-defaults-jwm-antix)
 else

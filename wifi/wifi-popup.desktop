@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Name=WiFi Popup
+Comment=Gestor rápido de conexiones WiFi
+Exec=wifi-popup
+Icon=network-wireless
+Terminal=false
+Type=Application
+Categories=Network;Utility;
+# Opcional: si quieres que sea la aplicación por defecto para algún tipo de archivo o protocolo
+# MimeType=x-scheme-handler/wifi;
+StartupNotify=true

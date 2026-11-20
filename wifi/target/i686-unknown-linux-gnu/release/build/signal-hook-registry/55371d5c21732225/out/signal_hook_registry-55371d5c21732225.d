@@ -1,0 +1,9 @@
+/home/goosely/Github_Repos/personaldotfilejwm/wifi/target/i686-unknown-linux-gnu/release/build/signal-hook-registry/55371d5c21732225/out/signal_hook_registry-55371d5c21732225.d: /home/goosely/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/signal-hook-registry-1.4.8/src/lib.rs /home/goosely/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/signal-hook-registry-1.4.8/src/half_lock.rs /home/goosely/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/signal-hook-registry-1.4.8/src/vec_map.rs
+
+/home/goosely/Github_Repos/personaldotfilejwm/wifi/target/i686-unknown-linux-gnu/release/build/signal-hook-registry/55371d5c21732225/out/libsignal_hook_registry-55371d5c21732225.rlib: /home/goosely/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/signal-hook-registry-1.4.8/src/lib.rs /home/goosely/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/signal-hook-registry-1.4.8/src/half_lock.rs /home/goosely/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/signal-hook-registry-1.4.8/src/vec_map.rs
+
+/home/goosely/Github_Repos/personaldotfilejwm/wifi/target/i686-unknown-linux-gnu/release/build/signal-hook-registry/55371d5c21732225/out/libsignal_hook_registry-55371d5c21732225.rmeta: /home/goosely/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/signal-hook-registry-1.4.8/src/lib.rs /home/goosely/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/signal-hook-registry-1.4.8/src/half_lock.rs /home/goosely/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/signal-hook-registry-1.4.8/src/vec_map.rs
+
+/home/goosely/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/signal-hook-registry-1.4.8/src/lib.rs:
+/home/goosely/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/signal-hook-registry-1.4.8/src/half_lock.rs:
+/home/goosely/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/signal-hook-registry-1.4.8/src/vec_map.rs:

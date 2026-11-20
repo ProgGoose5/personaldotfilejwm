@@ -1,0 +1,34 @@
+[package]
+name = "wifi-popup"
+version = "0.1.0"
+edition = "2021"
+description = "Un popup ligero para gestionar conexiones WiFi con NetworkManager." # <-- AÑADIR
+
+[dependencies]
+windui = "0.34"
+nmrs = "1.0"
+tokio = { version = "1", features = ["rt", "macros"] }
+
+[profile.release]
+lto = true
+strip = true
+codegen-units = 1
+panic = "abort"
+
+# Añade esto al final de tu Cargo.toml
+
+[package.metadata.deb]
+maintainer = "Tu Nombre <tu@email.com>"
+copyright = "2024, Tu Nombre"
+section = "utils"
+priority = "optional"
+depends = "$auto"
+extended-description = "Un popup ligero para gestionar conexiones WiFi con NetworkManager."
+
+assets = [
+    # ✅ RUTA CORREGIDA: usa "target/release/", NO "target/i686.../release/"
+    ["target/release/wifi-popup", "usr/bin/wifi-popup", "755"],
+    ["wifi-popup.desktop", "usr/share/applications/wifi-popup.desktop", "644"],
+    # Si tienes un icono personalizado, añade también su línea:
+    # ["wifi-popup.png", "usr/share/icons/hicolor/128x128/apps/wifi-popup.png", "644"],
+]

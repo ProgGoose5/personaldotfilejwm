@@ -1,0 +1,14 @@
+/home/goosely/Github_Repos/personaldotfilejwm/wifi/target/release/build/serde/e5aeed6b1f5757d6/out/serde-e5aeed6b1f5757d6.d: /home/goosely/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/lib.rs /home/goosely/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/integer128.rs /home/goosely/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/mod.rs /home/goosely/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/de.rs /home/goosely/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/ser.rs /home/goosely/Github_Repos/personaldotfilejwm/wifi/target/release/build/serde/aec2314f7c69549c/out/private.rs
+
+/home/goosely/Github_Repos/personaldotfilejwm/wifi/target/release/build/serde/e5aeed6b1f5757d6/out/libserde-e5aeed6b1f5757d6.rlib: /home/goosely/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/lib.rs /home/goosely/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/integer128.rs /home/goosely/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/mod.rs /home/goosely/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/de.rs /home/goosely/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/ser.rs /home/goosely/Github_Repos/personaldotfilejwm/wifi/target/release/build/serde/aec2314f7c69549c/out/private.rs
+
+/home/goosely/Github_Repos/personaldotfilejwm/wifi/target/release/build/serde/e5aeed6b1f5757d6/out/libserde-e5aeed6b1f5757d6.rmeta: /home/goosely/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/lib.rs /home/goosely/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/integer128.rs /home/goosely/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/mod.rs /home/goosely/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/de.rs /home/goosely/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/ser.rs /home/goosely/Github_Repos/personaldotfilejwm/wifi/target/release/build/serde/aec2314f7c69549c/out/private.rs
+
+/home/goosely/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/lib.rs:
+/home/goosely/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/integer128.rs:
+/home/goosely/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/mod.rs:
+/home/goosely/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/de.rs:
+/home/goosely/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.229/src/private/ser.rs:
+/home/goosely/Github_Repos/personaldotfilejwm/wifi/target/release/build/serde/aec2314f7c69549c/out/private.rs:
+
+# env-dep:OUT_DIR=/home/goosely/Github_Repos/personaldotfilejwm/wifi/target/release/build/serde/aec2314f7c69549c/out
