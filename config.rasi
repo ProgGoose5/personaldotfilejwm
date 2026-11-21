@@ -1,0 +1,10 @@
+/* ~/.config/rofi/config.rasi */
+configuration {
+    /* ... otras configuraciones ... */
+    show-icons: true;
+    icon-theme: "Papirus"; /* O el tema de iconos que tengas instalado */
+    drun-display-format: "{icon} {name}"; /* Aunque el tema lo sobrescribe, es bueno tenerlo */
+}
+
+/* Aplica el tema que creamos */
+@theme "~/.config/rofi/windows-like.rasi"

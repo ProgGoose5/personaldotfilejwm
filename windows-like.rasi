@@ -1,0 +1,76 @@
+/* ~/.config/rofi/windows-like.rasi */
+
+* {
+    /* Paleta de colores: Gris oscuro y blanco no puro */
+    bg-dark: #1E1E1E;      /* Fondo principal de la ventana */
+    bg-light: #2D2D2D;     /* Fondo de los elementos (hover) */
+    bg-selected: #3A3A3A;  /* Fondo del elemento seleccionado */
+    fg-soft: #E0E0E0;      /* Texto principal (blanco no puro) */
+    fg-dim: #A0A0A0;       /* Texto secundario o deshabilitado */
+
+    /* Tipografía y espaciado */
+    font: "Sans 10";
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+    border-radius: 0;      /* Sin bordes redondeados (estilo Windows) */
+}
+
+window {
+    background-color: @bg-dark;
+    border: 2px solid #333333; /* Borde sutil para definir la ventana */
+    width: 40%;                 /* Ancho de la ventana (ajústalo a tu gusto) */
+    padding: 15px;
+}
+
+/* Barra de entrada de texto (opcional, pero útil) */
+inputbar {
+    background-color: @bg-dark;
+    text-color: @fg-soft;
+    padding: 8px;
+    margin: 0 0 10px 0;
+    border: 0px 0px 1px 0px;
+    border-color: #444444;
+}
+
+/* Contenedor principal de la lista de aplicaciones */
+listview {
+    background-color: transparent;
+    columns: 2;          /* Fuerza 2 aplicaciones por fila */
+    lines: 4;            /* Muestra 4 filas (8 apps visibles). Ajusta según tu pantalla */
+    spacing: 12px;       /* Espacio entre celdas de la cuadrícula */
+    scrollbar: false;
+}
+
+/* Estilo de cada celda (elemento) de la cuadrícula */
+element {
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 0;
+}
+
+/* Estilo de la celda al pasar el ratón por encima */
+element selected {
+    background-color: @bg-selected;
+    text-color: @fg-soft;
+}
+
+/* Estructura interna de cada elemento: Icono arriba, Texto abajo */
+element-icon {
+    size: 48px;          /* Tamaño del icono */
+    horizontal-align: 0.5; /* Centra el icono horizontalmente */
+    vertical-align: 0.5;
+    margin: 0 0 5px 0;   /* Espacio entre icono y texto */
+}
+
+element-text {
+    horizontal-align: 0.5; /* Centra el texto horizontalmente */
+    vertical-align: 0.5;
+    text-color: @fg-soft;
+    font: "Sans 9";      /* Fuente un poco más pequeña para el nombre */
+}
+
+/* Opcional: Para que el texto no se corte si es muy largo */
+element-text {
+    ellipsize: middle;
+}
