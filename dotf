@@ -1,0 +1,19 @@
+<RootMenu height="18"> <!-- Sin onroot -->
+  <Include>$HOME/.jwm/menu</Include>
+  <!-- ... resto de entradas ... -->
+</RootMenu>
+
+<!-- ================= BARRA DE TAREAS ================= -->
+<Tray x="0" y="-1" height="30" autohide="false">
+  <!-- Botón del menú con logo de Linux -->
+  <TrayButton icon="/usr/share/icons/papirus-antix/48x48/apps/distributor-logo-antix.svg">root:1</TrayButton>
+  <Spacer width="4"/>
+  <TrayButton popup="Rofi" icon="/usr/share/icons/papirus-antix/48x48/apps/system-search.png">exec:rofi -show drun</TrayButton>
+  <TrayButton popup="Archivos" icon="/usr/share/icons/papirus-antix/48x48/apps/system-file-manager.png">exec:pcmanfm</TrayButton>
+  <TrayButton popup="Navegador" icon="/usr/share/icons/papirus-antix/48x48/apps/web-browser.png">exec:falkon</TrayButton>
+  <TrayButton popup="Mostrar escritorio" icon="/usr/share/icons/papirus-antix/48x48/places/user-desktop.png">showdesktop</TrayButton>
+  <Spacer width="8"/>
+  <TaskList maxwidth="300"/>
+  <Dock/> <!-- Aquí aparecerá el icono dinámico de connman-gtk -->
+  <Clock format="%H:%M">exec:xclock</Clock>
+</Tray>
